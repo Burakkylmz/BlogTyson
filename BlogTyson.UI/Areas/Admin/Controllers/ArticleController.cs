@@ -13,7 +13,6 @@ namespace BlogTyson.UI.Areas.Admin.Controllers
     {
         public ActionResult Add()
         {
-            
             AddArticleVM model = new AddArticleVM()
             {
                 Categories = service.CategoryService.GetActive(),

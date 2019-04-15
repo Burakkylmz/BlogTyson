@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+<section class="content-header">
+    <ol class="breadcrumb">
+        <li><a href="/Admin/Home/AdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/Admin/AppUser/List">Forms</a></li>
+        <li class="active">Add User</li>
+    </ol>
+</section>
+
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Add User</h3>
+                </div>
+                <form action="/Admin/AppUser/Add" method="post" role="form" enctype="multipart/form-data">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="FirstName">First Name</label>
+                            <input type="text" name="FirstName" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="LastName">Last Name</label>
+                            <input type="text" name="LastName" class="form-control" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="UserName">User Name</label>
+                            <input type="text" name="UserName" class="form-control" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email" name="Email" id="exampleInputEmail1" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" name="Password" id="exampleInputPassword1" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="Role">Role</label>
+                            <select name="Role" class="form-control">
+                                @foreach (var item in Enum.GetNames(typeof(BlogTyson.DAL.ORM.Enum.Role)))
+                                {
+                                    <option value="@item">@item</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
