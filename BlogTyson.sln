@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTyson.UI", "BlogTyson.UI\BlogTyson.UI.csproj", "{F62920E8-8D5D-4527-B54A-FD5B265E9760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTyson.DAL", "BlogTyson.DAL\BlogTyson.DAL.csproj", "{A53F040B-C305-4B23-BD1C-E7B00BB58D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTyson.BLL", "BlogTyson.BLL\BlogTyson.BLL.csproj", "{BA28C1D9-B887-42DC-8F51-B25ACF008337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F62920E8-8D5D-4527-B54A-FD5B265E9760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62920E8-8D5D-4527-B54A-FD5B265E9760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62920E8-8D5D-4527-B54A-FD5B265E9760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53F040B-C305-4B23-BD1C-E7B00BB58D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53F040B-C305-4B23-BD1C-E7B00BB58D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53F040B-C305-4B23-BD1C-E7B00BB58D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53F040B-C305-4B23-BD1C-E7B00BB58D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA28C1D9-B887-42DC-8F51-B25ACF008337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA28C1D9-B887-42DC-8F51-B25ACF008337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA28C1D9-B887-42DC-8F51-B25ACF008337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA28C1D9-B887-42DC-8F51-B25ACF008337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
