@@ -39,12 +39,19 @@ namespace BlogTyson.UI.Areas.Admin.Controllers
 
         public ActionResult Update(Guid id)
         {
+            UpdateArticleVM model = new UpdateArticleVM();
+
             Article article = service.ArticleService.GetById(id);
-            ArticleDTO model = new ArticleDTO();
-            model.ID = article.ID;
-            model.Content = article.Content;
-            model.Header = article.Header;
+            model.Article.ID = article.ID;
+            model.Article.Header = article.Header;
+            model.Article.Content = article.Content;
+
+            model.Categories = service.CategoryService.GetActive();
+            model.AppUsers = service.AppUserService.GetActive();
+
             return View(model);
+            
+            
         }
 
         [HttpPost]
@@ -53,8 +60,11 @@ namespace BlogTyson.UI.Areas.Admin.Controllers
             Article article = service.ArticleService.GetById(data.ID);
             article.Header = data.Header;
             article.Content = data.Content;
+            article.CategoryID = data.CategoryID;
+            article.AppUserID = data.AppUserID;
+
             service.ArticleService.Update(article);
-            TempData["Successful"] = "Transaction is successful.";
+
             return Redirect("/Admin/Article/List");
         }
 

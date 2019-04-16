@@ -123,6 +123,8 @@
     <Compile Include="Areas\Admin\Models\DTO\BaseDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryDTO.cs" />
     <Compile Include="Areas\Admin\Models\VM\AddArticleVM.cs" />
+    <Compile Include="Areas\Admin\Models\VM\BaseVM.cs" />
+    <Compile Include="Areas\Admin\Models\VM\UpdateArticleVM.cs" />
     <Compile Include="Areas\Member\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Member\Controllers\BaseController.cs" />
     <Compile Include="Areas\Member\Controllers\HomeController.cs" />
@@ -160,6 +162,7 @@
     <Content Include="Areas\Member\Views\web.config" />
     <Content Include="Areas\Member\Views\Shared\_MemberLayoutPage.cshtml" />
     <Content Include="Areas\Member\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Update.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
