@@ -46,18 +46,24 @@ namespace BlogTyson.BLL.Repository
         {
             return table.Where(x => x.Status == BlogTyson.DAL.ORM.Enum.Status.Active).ToList();
         }
+
         public T GetByDefault(Expression<Func<T, bool>> exp)
         {
             return table.Where(exp).FirstOrDefault();
         }
+
         public List<T> GetDefault(Expression<Func<T, bool>> exp)
         {
             return table.Where(exp).ToList();
         }
+
+
         public T GetById(Guid id)
         {
             return table.Find(id);
         }
+
+
         public void Remove(Guid id)
         {
             T item = GetById(id);

@@ -125,10 +125,16 @@
     <Compile Include="Areas\Admin\Models\VM\AddArticleVM.cs" />
     <Compile Include="Areas\Member\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Member\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Member\Controllers\HomeController.cs" />
     <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
+    <Compile Include="Areas\Member\Models\VM\ArticleCommentVM.cs" />
+    <Compile Include="Areas\Member\Models\VM\CommentVM.cs" />
+    <Compile Include="Areas\Member\Models\VM\JsonLikeVM.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VM\LoginVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +159,7 @@
     <Content Include="Areas\Admin\Views\Article\List.cshtml" />
     <Content Include="Areas\Member\Views\web.config" />
     <Content Include="Areas\Member\Views\Shared\_MemberLayoutPage.cshtml" />
+    <Content Include="Areas\Member\Views\Home\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -164,12 +171,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Areas\Member\Models\" />
+    <Folder Include="Areas\Member\Models\DTO\" />
     <Folder Include="Areas\Member\Views\Article\" />
     <Folder Include="Areas\Member\Views\Base\" />
     <Folder Include="Content\image\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlogTyson.BLL\BlogTyson.BLL.csproj">

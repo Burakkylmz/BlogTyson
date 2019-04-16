@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlogTyson.BLL.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,6 @@ namespace BlogTyson.UI.Areas.Member.Controllers
 {
     public class BaseController : Controller
     {
-        // GET: Member/Base
-        public ActionResult Index()
-        {
-            return View();
-        }
+        protected EntityService service = new EntityService();
     }
 }
