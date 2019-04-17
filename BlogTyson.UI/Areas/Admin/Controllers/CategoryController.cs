@@ -45,14 +45,12 @@ namespace BlogTyson.UI.Areas.Admin.Controllers
             cat.CategoryName = data.CategoryName;
             cat.Description = data.Description;
             service.CategoryService.Update(cat);
-            TempData["Successful"] = "Transaction is successful.";
             return Redirect("/Admin/Category/List");
         }
 
         public ActionResult Delete(Guid id)
         {
             service.CategoryService.Remove(id);
-            TempData["Successful"] = "Transaction is successful.";
             return Redirect("/Admin/Category/List");
         }
     }

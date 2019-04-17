@@ -165,6 +165,8 @@
     <Content Include="Areas\Admin\Views\Article\Update.cshtml" />
     <Content Include="Areas\Member\Views\Home\MemberHomeIndex.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AdminHomeIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Update.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
