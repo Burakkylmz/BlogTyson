@@ -17,7 +17,8 @@ namespace BlogTyson.UI.Areas.Member
             context.MapRoute(
                 "Member_default",
                 "Member/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "BlogTyson.UI.Areas.Member.Controllers" }
             );
         }
     }

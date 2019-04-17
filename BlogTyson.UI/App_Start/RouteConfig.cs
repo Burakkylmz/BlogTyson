@@ -19,6 +19,9 @@ namespace BlogTyson.UI
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "BlogTyson.UI.Controllers" }
             );
+
+            
+
         }
     }
 }

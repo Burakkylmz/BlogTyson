@@ -17,9 +17,18 @@ namespace BlogTyson.UI.Controllers
         {
             if (HttpContext.User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("MemberHomeIndex", "home");
+                AppUser user = service.AppUserService.FindByuserName(User.Identity.Name);
+
+                if (user.Role == DAL.ORM.Enum.Role.Admin)
+                {
+                    return RedirectToAction("AdminHomeIndex", "Home");
+                }
+                else if (user.Role == DAL.ORM.Enum.Role.Member)
+                {
+                    return RedirectToAction("MemberHomeIndex", "Home");
+                }
+
             }
-            
             return View();
         }
 
@@ -34,9 +43,10 @@ namespace BlogTyson.UI.Controllers
 
                     string cookie = user.UserName;
                     FormsAuthentication.SetAuthCookie(cookie, true);
+
                     if (user.Role==DAL.ORM.Enum.Role.Admin)
                     {
-                        return Redirect("/Admin/Home/MemberHomeIndex");
+                        return Redirect("/Admin/Home/AdminHomeIndex");
                     }
                     else if (user.Role == DAL.ORM.Enum.Role.Member)
                     {
@@ -56,7 +66,7 @@ namespace BlogTyson.UI.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return Redirect("/home/index");
+            return Redirect("/Account/Login");
         }
 
 
