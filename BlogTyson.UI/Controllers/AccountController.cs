@@ -17,11 +17,12 @@ namespace BlogTyson.UI.Controllers
         {
             if (HttpContext.User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("index", "home");
+                return RedirectToAction("MemberHomeIndex", "home");
             }
             
             return View();
         }
+
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Login(LoginVM credentials)
         {
@@ -33,7 +34,15 @@ namespace BlogTyson.UI.Controllers
 
                     string cookie = user.UserName;
                     FormsAuthentication.SetAuthCookie(cookie, true);
-                    return RedirectToAction("index", "home");
+                    if (user.Role==DAL.ORM.Enum.Role.Admin)
+                    {
+                        return Redirect("/Admin/Home/MemberHomeIndex");
+                    }
+                    else if (user.Role == DAL.ORM.Enum.Role.Member)
+                    {
+                        return Redirect("/Member/Home/MemberHomeIndex");
+                    }
+                    
                 }
                 else
                 {
@@ -41,7 +50,7 @@ namespace BlogTyson.UI.Controllers
                     return View();
                 }
             }
-            TempData["class"] = "custom-show";
+            
             return View();
         }
         public ActionResult Logout()

@@ -10,7 +10,7 @@ namespace BlogTyson.UI.Areas.Member.Controllers
     public class HomeController : BaseController
     {
 
-        public ActionResult Index()
+        public ActionResult MemberHomeIndex()
         {
 
             var model = service.ArticleService.GetActive().OrderByDescending(x => x.AddDate).Take(5);

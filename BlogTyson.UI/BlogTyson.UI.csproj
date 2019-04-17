@@ -118,6 +118,7 @@
     <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Models\DTO\AppUserDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\ArticleDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BaseDTO.cs" />
@@ -161,9 +162,11 @@
     <Content Include="Areas\Admin\Views\Article\List.cshtml" />
     <Content Include="Areas\Member\Views\web.config" />
     <Content Include="Areas\Member\Views\Shared\_MemberLayoutPage.cshtml" />
-    <Content Include="Areas\Member\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Article\Update.cshtml" />
+    <Content Include="Areas\Member\Views\Home\MemberHomeIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\AdminHomeIndex.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,7 +181,6 @@
     <Folder Include="Areas\Member\Views\Article\" />
     <Folder Include="Areas\Member\Views\Base\" />
     <Folder Include="Content\image\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlogTyson.BLL\BlogTyson.BLL.csproj">
