@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayoutPage.cshtml";
+}
+
+
+@model BlogTyson.UI.Areas.Member.Models.VM.ArticleCommentVM
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Box Comment -->
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <div class="user-block">
+                        @foreach (var item in Model.AppUsers)
+                        {
+                            <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                            <span class="username"><a href="#">@item.FirstName @item.LastName</a></span>
+                        }
+                        @foreach (var item in Model.Articles)
+                        {
+                            <span class="description">Shared publicly - @item.AddDate.ToShortDateString() @item.AddDate.ToShortTimeString() Today</span>
+                        }
+
+                    </div>
+                    <!-- /.user-block -->
+                    @*<div class="box-tools">
+                        <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-original-title="Mark as read">
+                            <i class="fa fa-circle-o"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>*@
+                    <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    @*<img class="img-responsive pad" src="../dist/img/photo2.png" alt="Photo">*@
+                    @*@foreach (var item in Model.Articles)
+                    {
+                        <h3>@item.Header</h3>
+                        <p>@item.Content</p>
+                        <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
+                        <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+                        <span class="pull-right text-muted">@item.Likes likes - @item.Comments comments</span>
+                    }*@
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer box-comments">
+                    <div class="box-comment">
+                        <!-- User image -->
+                        <img class="img-circle img-sm" src="../dist/img/user3-128x128.jpg" alt="User Image">
+
+                        <div class="comment-text">
+                            <span class="username">
+                                Maria Gonzales
+                                <span class="text-muted pull-right">8:03 PM Today</span>
+                            </span><!-- /.username -->
+                            It is a long established fact that a reader will be distracted
+                            by the readable content of a page when looking at its layout.
+                        </div>
+                        <!-- /.comment-text -->
+                    </div>
+                    <!-- /.box-comment -->
+                    <div class="box-comment">
+                        <!-- User image -->
+                        <img class="img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="User Image">
+
+                        <div class="comment-text">
+                            <span class="username">
+                                Luna Stark
+                                <span class="text-muted pull-right">8:03 PM Today</span>
+                            </span><!-- /.username -->
+                            It is a long established fact that a reader will be distracted
+                            by the readable content of a page when looking at its layout.
+                        </div>
+                        <!-- /.comment-text -->
+                    </div>
+                    <!-- /.box-comment -->
+                </div>
+                <!-- /.box-footer -->
+                <div class="box-footer">
+                    <form action="#" method="post">
+                        <img class="img-responsive img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="Alt Text">
+                        <!-- .img-push is used to add margin to elements next to floating images -->
+                        <div class="img-push">
+                            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
+                        </div>
+                    </form>
+                </div>
+                <!-- /.box-footer -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+</section>
+
+@*@section scripts2{
+
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+
+    <script>
+        $("#like").click(function () {
+            var id = "@foreach (var item in Model.Articles)
+                       {
+                            @item.ID
+                       }";
+
+            $.ajax({
+type: "POST",
+                dataType: "Json",
+                url: "@Url.Action("AddLike","Article")/" + id,
+                success: function (data) {
+        if (data.isSuccess == false) {
+                        $("#message").removeAttr("style");
+        }
+
+                    $("#message").text(data.userMessage);
+                    $("#showLikes").text(data.Likes);
+
+        setTimeout(function () {
+                        $("#message").slideUp(1000);
+        },2000)
+                }
+            })
+        })
+
+    </script>*@

@@ -1,4 +1,5 @@
-﻿using BlogTyson.UI.Areas.Member.Models.VM;
+﻿using BlogTyson.DAL.ORM.Entity;
+using BlogTyson.UI.Areas.Member.Models.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,8 @@ namespace BlogTyson.UI.Areas.Member.Controllers
             return View(model);
         }
 
+
+        
 
     }
 }

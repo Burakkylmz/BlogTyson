@@ -10,11 +10,25 @@ namespace BlogTyson.UI.Areas.Member.Controllers
 {
     public class ArticleController : BaseController
     {
-       
-        
 
-       
-    
+        private object comment;
+
+        public ActionResult Show(Guid id)
+        {
+            ArticleCommentVM model = new ArticleCommentVM() {
+
+                Articles = service.ArticleService.GetActive(),
+
+                AppUsers = service.AppUserService.GetActive(),
+
+                Comments = service.CommentService.GetDefault(x => x.ArticleID == id).OrderByDescending(x => x.AddDate).Take(10),
+
+                Likes = service.LikeService.GetDefault(x => x.ArticleID == id).Count(),
+
+            };
+            return View(model);
+        }
+
         public ActionResult AddComment(CommentVM data)
         {
             Comment comment = new Comment();

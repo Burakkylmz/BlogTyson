@@ -12,8 +12,13 @@ namespace BlogTyson.UI.Areas.Member.Models.VM
         public ArticleCommentVM()
         {
             Comments = new List<Comment>();
+            Articles = new List<Article>();
+            AppUsers = new List<AppUser>();
+
         }
-        public Article Article { get; set; }
+
+        public IEnumerable<AppUser> AppUsers { get; set; }
+        public IEnumerable<Article> Articles { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
         public int Likes { get; set; }
 
