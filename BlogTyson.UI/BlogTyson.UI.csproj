@@ -126,6 +126,9 @@
     <Compile Include="Areas\Admin\Models\VM\AddArticleVM.cs" />
     <Compile Include="Areas\Admin\Models\VM\BaseVM.cs" />
     <Compile Include="Areas\Admin\Models\VM\UpdateArticleVM.cs" />
+    <Compile Include="Areas\Author\AuthorAreaRegistration.cs" />
+    <Compile Include="Areas\Author\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\Author\Controllers\BaseController.cs" />
     <Compile Include="Areas\Member\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Member\Controllers\BaseController.cs" />
     <Compile Include="Areas\Member\Controllers\HomeController.cs" />
@@ -167,6 +170,7 @@
     <Content Include="Areas\Admin\Views\Home\AdminHomeIndex.cshtml" />
     <Content Include="Areas\Admin\Views\Category\List.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Update.cshtml" />
+    <Content Include="Areas\Author\Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
@@ -179,6 +183,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Areas\Author\Models\" />
+    <Folder Include="Areas\Author\Views\Article\" />
+    <Folder Include="Areas\Author\Views\Base\" />
+    <Folder Include="Areas\Author\Views\Shared\" />
     <Folder Include="Areas\Member\Models\DTO\" />
     <Folder Include="Areas\Member\Views\Article\" />
     <Folder Include="Areas\Member\Views\Base\" />
