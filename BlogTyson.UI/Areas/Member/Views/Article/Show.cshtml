@@ -26,28 +26,19 @@
 
                     </div>
                     <!-- /.user-block -->
-                    @*<div class="box-tools">
-                        <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-original-title="Mark as read">
-                            <i class="fa fa-circle-o"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                            <i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>*@
                     <!-- /.box-tools -->
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     @*<img class="img-responsive pad" src="../dist/img/photo2.png" alt="Photo">*@
-                    @*@foreach (var item in Model.Articles)
+                    @foreach (var item in Model.Articles)
                     {
                         <h3>@item.Header</h3>
                         <p>@item.Content</p>
                         <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
                         <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
                         <span class="pull-right text-muted">@item.Likes likes - @item.Comments comments</span>
-                    }*@
+                    }
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer box-comments">
@@ -103,7 +94,7 @@
 
 </section>
 
-@*@section scripts2{
+@section scripts2{
 
     <script src="~/Content/Scripts/jquery.min.js"></script>
 
@@ -133,4 +124,4 @@ type: "POST",
             })
         })
 
-    </script>*@
+    </script>
