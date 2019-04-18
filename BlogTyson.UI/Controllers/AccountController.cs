@@ -27,6 +27,10 @@ namespace BlogTyson.UI.Controllers
                 {
                     return RedirectToAction("MemberHomeIndex", "Home");
                 }
+                else if (user.Role == DAL.ORM.Enum.Role.Author)
+                {
+                    return RedirectToAction("AuthorHomeIndex", "Home");
+                }
 
             }
             return View();
@@ -52,7 +56,11 @@ namespace BlogTyson.UI.Controllers
                     {
                         return Redirect("/Member/Home/MemberHomeIndex");
                     }
-                    
+                    else if (user.Role == DAL.ORM.Enum.Role.Author)
+                    {
+                        return Redirect("/Member/Home/AuthorHomeIndex");
+                    }
+
                 }
                 else
                 {

@@ -18,7 +18,7 @@ namespace BlogTyson.UI.Areas.Author
                 "Author_default",
                 "Author/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "BlogTyson.UI.Author.Admin.Controllers" }
+                namespaces: new[] { "BlogTyson.UI.Areas.Author.Controllers" }
             );
         }
     }

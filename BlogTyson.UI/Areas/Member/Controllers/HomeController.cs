@@ -17,5 +17,7 @@ namespace BlogTyson.UI.Areas.Member.Controllers
 
             return View(model);
         }
+
+
     }
 }
